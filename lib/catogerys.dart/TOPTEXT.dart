@@ -28,9 +28,9 @@ class TopText extends StatelessWidget {
         ),
         Positioned(
 
-            left:-20,
-           top: -45,
-            child: Container(child: Lottie.asset('Assets Josn/Eid.json',height:120,),)),
+            left:-10,
+           top: -15,
+            child: Container(child: Lottie.asset('Assets Josn/Eid.json',height:75,),)),
 
       ],
     );

@@ -3,10 +3,24 @@ import 'package:cars/Screen.dart/Indicative%20directions.dart';
 import 'package:cars/Screen.dart/Traffic%20instructions.dart';
 import 'package:cars/Screen.dart/accessories.dart';
 import 'package:cars/Screen.dart/Regulatory signals.dart';
+import 'package:cars/Screens%20Of%20Cars/Chevrolet.dart';
+import 'package:cars/Screens%20Of%20Cars/GacGroup.dart';
+import 'package:cars/Screens%20Of%20Cars/Haval.dart';
+import 'package:cars/Screens%20Of%20Cars/Jeep.dart';
 import 'package:cars/Screens%20Of%20Cars/KIA.dart';
+import 'package:cars/Screens%20Of%20Cars/Land_Rover.dart';
+import 'package:cars/Screens%20Of%20Cars/Mercedes.dart';
+import 'package:cars/Screens%20Of%20Cars/Mitsubishi.dart';
+import 'package:cars/Screens%20Of%20Cars/Nissan.dart';
+import 'package:cars/Screens%20Of%20Cars/Soueast.dart';
+import 'package:cars/Screens%20Of%20Cars/Toyota.dart';
+import 'package:cars/Screens%20Of%20Cars/Volvo.dart';
+import 'package:cars/Screens%20Of%20Cars/ssang%20young.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'Screens Of Cars/BMW.dart';
+import 'Screens Of Cars/Foton.dart';
 import 'Screens Of Cars/Hyundai.dart';
 import 'Screens Of Cars/Mini.dart';
 import 'catogerys.dart/FindTxt.dart';
@@ -187,20 +201,202 @@ class _MainScreenState extends State<MainScreen> {
                                return const Mini();
                              }));
                        },),//MINI
-                        BestCard(number: numbers[2],number2: numbers[2],ontap: () {},),//ssang
-                        BestCard(number: numbers[3],number2: numbers[3], ontap: () {  },),//Mitsubishi
-                        BestCard(number: numbers[4],number2: numbers[4], ontap: () {  },),//Mercedes
-                        BestCard(number: numbers[5],number2: numbers[5], ontap: () {  },),//Haval
-                        BestCard(number: numbers[6],number2: numbers[6], ontap: () {  },),//Foton
-                        BestCard(number: numbers[7],number2: numbers[7], ontap: () {  },),//Gac-Group
-                        BestCard(number: numbers[8],number2: numbers[8], ontap: () {  },),//Soueast
-                        BestCard(number: numbers[9],number2: numbers[9], ontap: () {  },),//Volvo
-                        BestCard(number: numbers[10],number2: numbers[10], ontap: () {  },),//LandRover
-                        BestCard(number: numbers[11],number2: numbers[11], ontap: () {  },),//Toyota
-                        BestCard(number: numbers[12],number2: numbers[12], ontap: () {  },),//Nissan
-                        BestCard(number: numbers[13],number2: numbers[13], ontap: () {  },),//Chevrolet
-                        BestCard(number: numbers[14],number2: numbers[14], ontap: () {  },),//Bmw
-                        BestCard(number: numbers[15],number2: numbers[15], ontap: () {  },),//JEEP
+                        BestCard(number: numbers[2],number2: numbers[2],ontap: (){
+                          Navigator.push(context, PageRouteBuilder(
+                              transitionDuration: const Duration(milliseconds: 500) ,
+                              reverseTransitionDuration: const Duration(milliseconds: 500),
+                              transitionsBuilder: (context,animation,secondaryAnimation,child)
+                              {
+                                final slideAnimation= Tween(begin: const Offset(2,0),end: const Offset(0,0)).animate(animation);
+                                return SlideTransition(position: slideAnimation,child: child,);
+                              },
+                              pageBuilder: (context,animation,secondaryAnimation)
+                              {
+                                return const Ssang();
+                              }));
+                        },),//ssang
+                        BestCard(number: numbers[3],number2: numbers[3], ontap: (){
+                          Navigator.push(context, PageRouteBuilder(
+                              transitionDuration: const Duration(milliseconds: 500) ,
+                              reverseTransitionDuration: const Duration(milliseconds: 500),
+                              transitionsBuilder: (context,animation,secondaryAnimation,child)
+                              {
+                                final slideAnimation= Tween(begin: const Offset(2,0),end: const Offset(0,0)).animate(animation);
+                                return SlideTransition(position: slideAnimation,child: child,);
+                              },
+                              pageBuilder: (context,animation,secondaryAnimation)
+                              {
+                                return const Mitsubishi();
+                              }));
+                        },),//Mitsubishi
+                        BestCard(number: numbers[4],number2: numbers[4], ontap: (){
+                          Navigator.push(context, PageRouteBuilder(
+                              transitionDuration: const Duration(milliseconds: 500) ,
+                              reverseTransitionDuration: const Duration(milliseconds: 500),
+                              transitionsBuilder: (context,animation,secondaryAnimation,child)
+                              {
+                                final slideAnimation= Tween(begin: const Offset(2,0),end: const Offset(0,0)).animate(animation);
+                                return SlideTransition(position: slideAnimation,child: child,);
+                              },
+                              pageBuilder: (context,animation,secondaryAnimation)
+                              {
+                                return const Mercedes();
+                              }));
+                        },),//Mercedes
+                        BestCard(number: numbers[5],number2: numbers[5], ontap: (){
+                          Navigator.push(context, PageRouteBuilder(
+                              transitionDuration: const Duration(milliseconds: 500) ,
+                              reverseTransitionDuration: const Duration(milliseconds: 500),
+                              transitionsBuilder: (context,animation,secondaryAnimation,child)
+                              {
+                                final slideAnimation= Tween(begin: const Offset(2,0),end: const Offset(0,0)).animate(animation);
+                                return SlideTransition(position: slideAnimation,child: child,);
+                              },
+                              pageBuilder: (context,animation,secondaryAnimation)
+                              {
+                                return const Haval();
+                              }));
+                        },),//Haval
+                        BestCard(number: numbers[6],number2: numbers[6], ontap: (){
+                          Navigator.push(context, PageRouteBuilder(
+                              transitionDuration: const Duration(milliseconds: 500) ,
+                              reverseTransitionDuration: const Duration(milliseconds: 500),
+                              transitionsBuilder: (context,animation,secondaryAnimation,child)
+                              {
+                                final slideAnimation= Tween(begin: const Offset(2,0),end: const Offset(0,0)).animate(animation);
+                                return SlideTransition(position: slideAnimation,child: child,);
+                              },
+                              pageBuilder: (context,animation,secondaryAnimation)
+                              {
+                                return const Foton();
+                              }));
+                        },),//Foton
+                        BestCard(number: numbers[7],number2: numbers[7], ontap: (){
+                          Navigator.push(context, PageRouteBuilder(
+                              transitionDuration: const Duration(milliseconds: 500) ,
+                              reverseTransitionDuration: const Duration(milliseconds: 500),
+                              transitionsBuilder: (context,animation,secondaryAnimation,child)
+                              {
+                                final slideAnimation= Tween(begin: const Offset(2,0),end: const Offset(0,0)).animate(animation);
+                                return SlideTransition(position: slideAnimation,child: child,);
+                              },
+                              pageBuilder: (context,animation,secondaryAnimation)
+                              {
+                                return const Gac();
+                              }));
+                        },),//Gac-Group
+                        BestCard(number: numbers[8],number2: numbers[8], ontap: (){
+                          Navigator.push(context, PageRouteBuilder(
+                              transitionDuration: const Duration(milliseconds: 500) ,
+                              reverseTransitionDuration: const Duration(milliseconds: 500),
+                              transitionsBuilder: (context,animation,secondaryAnimation,child)
+                              {
+                                final slideAnimation= Tween(begin: const Offset(2,0),end: const Offset(0,0)).animate(animation);
+                                return SlideTransition(position: slideAnimation,child: child,);
+                              },
+                              pageBuilder: (context,animation,secondaryAnimation)
+                              {
+                                return const Soueast();
+                              }));
+                        },),//Soueast
+                        BestCard(number: numbers[9],number2: numbers[9], ontap: (){
+                          Navigator.push(context, PageRouteBuilder(
+                              transitionDuration: const Duration(milliseconds: 500) ,
+                              reverseTransitionDuration: const Duration(milliseconds: 500),
+                              transitionsBuilder: (context,animation,secondaryAnimation,child)
+                              {
+                                final slideAnimation= Tween(begin: const Offset(2,0),end: const Offset(0,0)).animate(animation);
+                                return SlideTransition(position: slideAnimation,child: child,);
+                              },
+                              pageBuilder: (context,animation,secondaryAnimation)
+                              {
+                                return const Volvo();
+                              }));
+                        },),//Volvo
+                        BestCard(number: numbers[10],number2: numbers[10], ontap: (){
+                          Navigator.push(context, PageRouteBuilder(
+                              transitionDuration: const Duration(milliseconds: 500) ,
+                              reverseTransitionDuration: const Duration(milliseconds: 500),
+                              transitionsBuilder: (context,animation,secondaryAnimation,child)
+                              {
+                                final slideAnimation= Tween(begin: const Offset(2,0),end: const Offset(0,0)).animate(animation);
+                                return SlideTransition(position: slideAnimation,child: child,);
+                              },
+                              pageBuilder: (context,animation,secondaryAnimation)
+                              {
+                                return const LandRover();
+                              }));
+                        },),//LandRover
+                        BestCard(number: numbers[11],number2: numbers[11], ontap: (){
+                          Navigator.push(context, PageRouteBuilder(
+                              transitionDuration: const Duration(milliseconds: 500) ,
+                              reverseTransitionDuration: const Duration(milliseconds: 500),
+                              transitionsBuilder: (context,animation,secondaryAnimation,child)
+                              {
+                                final slideAnimation= Tween(begin: const Offset(2,0),end: const Offset(0,0)).animate(animation);
+                                return SlideTransition(position: slideAnimation,child: child,);
+                              },
+                              pageBuilder: (context,animation,secondaryAnimation)
+                              {
+                                return const Toyota();
+                              }));
+                        },),//Toyota
+                        BestCard(number: numbers[12],number2: numbers[12], ontap: (){
+                          Navigator.push(context, PageRouteBuilder(
+                              transitionDuration: const Duration(milliseconds: 500) ,
+                              reverseTransitionDuration: const Duration(milliseconds: 500),
+                              transitionsBuilder: (context,animation,secondaryAnimation,child)
+                              {
+                                final slideAnimation= Tween(begin: const Offset(2,0),end: const Offset(0,0)).animate(animation);
+                                return SlideTransition(position: slideAnimation,child: child,);
+                              },
+                              pageBuilder: (context,animation,secondaryAnimation)
+                              {
+                                return const Nissan();
+                              }));
+                        },),//Nissan
+                        BestCard(number: numbers[13],number2: numbers[13], ontap: (){
+                          Navigator.push(context, PageRouteBuilder(
+                              transitionDuration: const Duration(milliseconds: 500) ,
+                              reverseTransitionDuration: const Duration(milliseconds: 500),
+                              transitionsBuilder: (context,animation,secondaryAnimation,child)
+                              {
+                                final slideAnimation= Tween(begin: const Offset(2,0),end: const Offset(0,0)).animate(animation);
+                                return SlideTransition(position: slideAnimation,child: child,);
+                              },
+                              pageBuilder: (context,animation,secondaryAnimation)
+                              {
+                                return const Chevrolet();
+                              }));
+                        },),//Chevrolet
+                        BestCard(number: numbers[14],number2: numbers[14], ontap: (){
+                          Navigator.push(context, PageRouteBuilder(
+                              transitionDuration: const Duration(milliseconds: 500) ,
+                              reverseTransitionDuration: const Duration(milliseconds: 500),
+                              transitionsBuilder: (context,animation,secondaryAnimation,child)
+                              {
+                                final slideAnimation= Tween(begin: const Offset(2,0),end: const Offset(0,0)).animate(animation);
+                                return SlideTransition(position: slideAnimation,child: child,);
+                              },
+                              pageBuilder: (context,animation,secondaryAnimation)
+                              {
+                                return const Bmw();
+                              }));
+                        },),//Bmw
+                        BestCard(number: numbers[15],number2: numbers[15], ontap: (){
+                          Navigator.push(context, PageRouteBuilder(
+                              transitionDuration: const Duration(milliseconds: 500) ,
+                              reverseTransitionDuration: const Duration(milliseconds: 500),
+                              transitionsBuilder: (context,animation,secondaryAnimation,child)
+                              {
+                                final slideAnimation= Tween(begin: const Offset(2,0),end: const Offset(0,0)).animate(animation);
+                                return SlideTransition(position: slideAnimation,child: child,);
+                              },
+                              pageBuilder: (context,animation,secondaryAnimation)
+                              {
+                                return const Jeep();
+                              }));
+                        },),//JEEP
                         BestCard(number: numbers[16],number2: numbers[16], ontap: (){
                           Navigator.push(context, PageRouteBuilder(
                               transitionDuration: const Duration(milliseconds: 500) ,

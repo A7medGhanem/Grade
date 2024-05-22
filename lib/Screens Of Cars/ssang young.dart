@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Chevrolet extends StatelessWidget {
-  const Chevrolet({super.key});
+class Ssang extends StatelessWidget {
+  const Ssang({super.key});
 
   @override
   Widget build(BuildContext context) {

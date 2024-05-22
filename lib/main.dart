@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'catogerys.dart/navigate bar.dart';
 import 'package:flutter/services.dart';
 
+
+
 void main() async {
   WidgetsFlutterBinding
       .ensureInitialized(); //this open app when happened problem of firebase

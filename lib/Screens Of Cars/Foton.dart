@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Chevrolet extends StatelessWidget {
-  const Chevrolet({super.key});
+class Foton extends StatelessWidget {
+  const Foton({super.key});
 
   @override
   Widget build(BuildContext context) {
