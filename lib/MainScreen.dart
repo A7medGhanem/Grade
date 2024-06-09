@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cars/Screen.dart/Indicative%20directions.dart';
+import 'package:cars/Screen.dart/Parts%20Of%20Cars.dart';
 import 'package:cars/Screen.dart/Traffic%20instructions.dart';
 import 'package:cars/Screen.dart/accessories.dart';
 import 'package:cars/Screen.dart/Regulatory signals.dart';
@@ -45,15 +46,7 @@ class MainScreen extends StatefulWidget {
 
 
 class _MainScreenState extends State<MainScreen> {
-  late bool isloading;
-  @override
-  void initState() {
-    // TODO: implement initState
-    isloading=true;
-    Future.delayed(const Duration(seconds: 2),(){setState(() {
-      isloading=false;
-    });});
-  }
+
  final List<Pic> numbers= [
    Pic(img: 'Images/Hyundai_logo_PNG2.png',num: 35),
    Pic(img: 'Images/MINI_logo_PNG2.png',num: 20),
@@ -495,7 +488,7 @@ class _MainScreenState extends State<MainScreen> {
                         },
                         pageBuilder: (context,animation,secondaryAnimation)
                         {
-                          return const Signals();
+                          return const PartsOfCars();
                         }));
                   },
                       height1: 150, height2: 80,ontap2: (){
@@ -513,7 +506,7 @@ class _MainScreenState extends State<MainScreen> {
                             }));
                       },
                       left1: 120, left2:115,
-                      txt1: '', txt2: 'اشارات تنظيمية',
+                      txt1: 'اجزاء السيارة', txt2: 'اشارات تنظيمية',
                       width1: 100, width2:100,
                       color1:const Color (0xffdceadb), color2: const Color(0xffffffff),
                       img1: 'Images/Web search-cuate.png', img2: 'Images/On the way-pana.png'),//اشارات تنظيميه
