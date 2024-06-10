@@ -1,21 +1,20 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cars/models/Cars.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import '../models/Cars.dart';
-
-class Mini_cooper extends StatefulWidget {
-  const Mini_cooper({super.key});
+class MiniCountry extends StatefulWidget {
+  const MiniCountry({super.key});
 
   @override
-  State<Mini_cooper> createState() => _Mini_cooperState();
+  State<MiniCountry> createState() => _MiniCountryState();
 }
 
-class _Mini_cooperState extends State<Mini_cooper> {
-  CollectionReference user = FirebaseFirestore.instance.collection("Mini Cooper");
+class _MiniCountryState extends State<MiniCountry> {
+  CollectionReference user = FirebaseFirestore.instance.collection("Mini Countryman");
   @override
   Widget build(BuildContext context) {
-    return Directionality(
+   return Directionality(
       textDirection: TextDirection.rtl,
       child: SafeArea(
           child:
@@ -206,6 +205,5 @@ class _Mini_cooperState extends State<Mini_cooper> {
                 }),
           )),
     );
-
   }
 }

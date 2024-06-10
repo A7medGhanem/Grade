@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Cars extends StatelessWidget {
   const Cars({super.key, required this.txt1, required this.txt2, required this.txt3,
@@ -66,14 +67,17 @@ class Cars extends StatelessWidget {
                   Text(txt6,style: TextStyle(fontFamily: 'ibmB',fontSize: 16,)),
                 ],),
               SizedBox(height: 20,),
-              Row(
-                children: [
-                  Text(txt7,style: TextStyle(fontFamily: 'ibmB',fontSize: 16,color: Colors.grey)),
-                  SizedBox(width: 25,),
-                  Text(txt8,style: TextStyle(fontFamily: 'ibmB',fontSize: 16,color: Colors.green)),
-                  SizedBox(width: 25,),
-                  Text(txt9,style: TextStyle(fontFamily: 'ibmB',fontSize: 16,color: Colors.red)),
-                ],),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Text(txt7,style: TextStyle(fontFamily: 'ibmB',fontSize: 16,color: Colors.grey)),
+                    SizedBox(width: 25,),
+                    Text(txt8,style: TextStyle(fontFamily: 'ibmB',fontSize: 16,color: Colors.green)),
+                    SizedBox(width: 25,),
+                    Text(txt9,style: TextStyle(fontFamily: 'ibmB',fontSize: 16,color: Colors.red)),
+                  ],),
+              ),
               SizedBox(height: 20,),
               Row(
                 children: [
