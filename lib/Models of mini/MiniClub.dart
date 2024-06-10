@@ -11,7 +11,7 @@ class MiniClub extends StatefulWidget {
 }
 
 class _MiniClubState extends State<MiniClub> {
-  CollectionReference user = FirebaseFirestore.instance.collection("Mini Countryman");
+  CollectionReference user = FirebaseFirestore.instance.collection("Mini Clubman");
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class _MiniClubState extends State<MiniClub> {
               ),
               title: SizedBox(
                   width:120,
-                  child: Text('ميني كوبر 2023',style: TextStyle(fontFamily: 'ibmB',fontSize: 14,color: Colors.white),)),
+                  child: Text('ميني كلوبمان 2023',style: TextStyle(fontFamily: 'ibmB',fontSize: 14,color: Colors.white),)),
               centerTitle: true,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomRight: Radius.circular(15),bottomLeft: Radius.circular(15))),
 

@@ -1,3 +1,4 @@
+import 'package:cars/Models%20of%20mini/MiniClub.dart';
 import 'package:cars/Models%20of%20mini/MiniConutry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -84,7 +85,7 @@ class Mini extends StatelessWidget {
                         },
                         pageBuilder: (context,animation,secondaryAnimation)
                         {
-                          return const Hyundai2017();
+                          return const  MiniClub();
                         }));
                   },
                   child: GestCarModel(img1: 'https://arabgt.com/wp-content/uploads/2023/02/%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9-%D9%85%D9%8A%D9%86%D9%8A-%D9%83%D9%84%D9%88%D8%A8%D9%85%D8%A7%D9%86-2023-2.jpg',
