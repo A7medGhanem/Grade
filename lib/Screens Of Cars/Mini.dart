@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../Models Of Hyundai/Hyundai2016.dart';
 import '../Models Of Hyundai/Hyundai2017.dart';
+import '../Models of mini/Mini Cooper.dart';
 import '../models/GesterModelCar.dart';
 
 class Mini extends StatelessWidget {
@@ -44,12 +45,12 @@ class Mini extends StatelessWidget {
                         },
                         pageBuilder: (context,animation,secondaryAnimation)
                         {
-                          return const Hyundai2017();
+                          return const Mini_cooper();
                         }));
                   },
-                  child: GestCarModel(img1: 'https://platform.cstatic-images.com/in/v2/stock_photos/19628685-d640-496a-8abc-a78e7a92fc98/412c5f84-fa82-457d-bb86-c6d7b4f02534.png',
-                      txt1: 'هيونداي سنتافيه 2017',
-                      txt2: 'نعرض لكم جميع مواصفات سيارة هيونداي سانتا في 2017هي سيارة كروس أوفر متوسطة الحجم من إنتاج شركة هيونداي الكورية الجنوبية. وهي متوفرة في طرازين أساسيين: سانتا في وسانتا في سبورت. وفيما يلي بعض الميزات والمواصفات الرئيسية لسيارة هيونداي سنتافي 2017'),
+                  child: GestCarModel(img1: 'https://www.elbalad.news/Upload/libfiles/976/9/600.jpg',
+                      txt1: 'ميني كوبر 2023',
+                      txt2: 'سيارة Mini Cooper موديل 2023 تجمع بين التصميم الأيقوني الكلاسيكي والأداء العصري القوي، مع خيارات متعددة للمحركات تتراوح بين البنزين والهجين. تتميز بمقصورة داخلية فاخرة مزودة بأحدث التقنيات الترفيهية وأنظمة الأمان. توفر تجربة قيادة ممتعة واقتصادية في استهلاك الوقود، مما يجعلها خيارًا مميزًا في فئة السيارات الصغيرة الفاخرة.'),
                 ),//2017
 
                 GestureDetector(
