@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 
 import '../Models Of Hyundai/Hyundai2016.dart';
 import '../Models Of Hyundai/Hyundai2017.dart';
+import '../Models of mini/Beacman.dart';
 import '../Models of mini/Mini Cooper.dart';
 import '../models/GesterModelCar.dart';
 
@@ -105,11 +106,11 @@ class Mini extends StatelessWidget {
                         },
                         pageBuilder: (context,animation,secondaryAnimation)
                         {
-                          return const Hyundai2016();
+                          return const Mini_Paceman();
                         }));
                   },
-                  child: GestCarModel(img1: 'https://platform.cstatic-images.com/in/v2/stock_photos/a8a2a5fb-2ef6-4d53-b5b6-ff3ef25db0c6/2444b3b9-ceca-4dc8-9116-4d3b1bb7b46c.png',
-                      txt1: 'هونداي أكورد 2016',txt2: 'حصلت هوندا أكورد 2016 على لمسات تصميمية أرقى وأكثر رياضية من ذي قبل ، واشتملت عملية تحديث الشكل الخارجي على صادم أمامي جديد رفيع وشبك أمامي جديد مع فتحة تهوية أفقية في الأسفل، بالإضافة إلى تصميم جديد لأضواء LED الأمامية والخلفية، مع تصاميم جديدة لإطارات المعدنية وجناح مدمج على حافة الصندوق الخلفي وفوهات عادم معدنية بيضاوية الشكل على جانبي الصادم الخلفي.'),
+                  child: GestCarModel(img1: 'https://media.ed.edmunds-media.com/mini/cooper-paceman/2016/oem/2016_mini_cooper-paceman_2dr-hatchback_s_fq_oem_9_815x543.jpg',
+                      txt1: 'ميني بيسمان 2023',txt2: 'سيارة ميني كوبر Mini Paceman هي سيارة كروس أوفر كوبيه مدمجة قدمتها شركة ميني بين عامي 2012 و2016. تتميز بتصميم رياضي أنيق ومقصورة داخلية راقية تتسع لأربعة ركاب، بالإضافة إلى أداء ديناميكي ومحرك فعال. توفر السيارة تجربة قيادة ممتعة بفضل نظام الدفع الرباعي وتقنيات القيادة المتطورة.'),
                 ),//2016
 
               ],
