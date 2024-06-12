@@ -131,48 +131,63 @@ class MoreOption extends StatelessWidget {
                                       Img: 'Images/ahmed.jpg',
                                       left: 100,
                                       fonsize: 18,
-                                    ),
+                                    ),//me
                                     SizedBox(
                                       height: 10,
                                     ),
                                     Developer(
                                       Bottomtxt: 'Flutter Developer',
-                                      Toptxt: 'Yousef Mahrous Elqaramousi',
-                                      Img: 'Images/yousef.jpg',
-                                      fonsize: 14,
-                                      left: 100,
-                                    ), //انا
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Developer(
-                                      Bottomtxt: 'Data-Base Developer',
                                       Toptxt: 'Mahmoud Reda AbdelSattar',
                                       Img: 'Images/mahmoud.jpg',
                                       left: 90,
                                       fonsize: 14,
-                                    ), //يوسف
+                                    ),
+                                   //yousef
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                     //mahmoud
                                     SizedBox(
                                       height: 10,
                                     ),
                                     Developer(
-                                      Bottomtxt: 'Data-Base Developer',
+                                      Bottomtxt: 'UI-UX ',
                                       Toptxt: 'Eslam Mohamed Gabr',
                                       Img: 'Images/eslam.jpg',
                                       fonsize: 16,
-                                      left: 90,
-                                    ), //محمود
+                                      left: 150,
+                                    ), //islam
                                     SizedBox(
                                       height: 10,
                                     ),
                                     Developer(
-                                      Bottomtxt: 'UI-UX Developer',
+                                      Bottomtxt: 'Data Base Developer',
                                       Toptxt: 'Hady Aziz Hady',
                                       Img: 'Images/hady.jpg',
                                       fonsize: 16,
                                       left: 80,
-                                    ), //اسلام
+                                    ), //hady
 
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Developer(
+                                      Bottomtxt: 'Data Base Developer',
+                                      Toptxt: 'Ashraqat Abdullah Ahmed',
+                                      Img: 'Images/ashraqat.jpg',
+                                      fonsize: 16,
+                                      left: 100,
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Developer(
+                                      Bottomtxt: 'Graphic Designer',
+                                      Toptxt: 'Yousef Mahrous Elqaramousi',
+                                      Img: 'Images/yousef.jpg',
+                                      fonsize: 14,
+                                      left: 100,
+                                    ),
                                     SizedBox(
                                       height: 10,
                                     ),
@@ -182,20 +197,9 @@ class MoreOption extends StatelessWidget {
                                       Img: 'Images/dina.jpg',
                                       fonsize: 16,
                                       left: 100,
-                                    ), //هادي
-                                    SizedBox(
-                                      height: 10,
-                                    ), //دينا
-                                    Developer(
-                                      Bottomtxt: 'Graphic Designer',
-                                      Toptxt: 'Ashraqat Abdullah Ahmed',
-                                      Img: 'Images/ashraqat.jpg',
-                                      fonsize: 16,
-                                      left: 100,
-                                    ), //اشرقت
-                                    SizedBox(
-                                      height: 10,
-                                    ),
+                                    ), //dina
+
+
                                   ],
                                 ),
                               ),
