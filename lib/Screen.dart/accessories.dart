@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cars/catogerys.dart/accessoires.dart';
 import 'package:cars/models/BackBttn.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -14,6 +15,48 @@ class Accessor extends StatefulWidget {
 }
 
 class _AccessorState extends State<Accessor> {
+  bool isConnected = false;
+  bool isDelayedActionExecuted = false;
+  @override
+  void initState() {
+
+    // TODO: implement initState
+    super.initState();
+    Connectivity().checkConnectivity().then((result) {
+      setState(() {
+        isConnected = result != ConnectivityResult.none;
+      });
+    });
+
+    // Listen to connectivity changes
+    Connectivity().onConnectivityChanged.listen((ConnectivityResult result) {
+      if (result == ConnectivityResult.none && isConnected) {
+        // Internet was connected and now it's disconnected
+        Future.delayed(Duration(seconds: 10), () {
+          if (mounted && !isDelayedActionExecuted) {
+            setState(() {
+              isConnected = false; // Update UI if needed
+              isDelayedActionExecuted = true; // Prevent repeated execution
+              // Add your code here to execute after 15 seconds of disconnection
+              debugPrint('Delayed action executed after internet disconnection.');
+            });
+          }
+        });
+      } else {
+        // Internet is connected
+        setState(() {
+          isConnected = true; // Update UI if needed
+          isDelayedActionExecuted = false; // Reset delayed action flag
+        });
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    // Dispose the controller when the widget is disposed
+    super.dispose();
+  }
   CollectionReference usersref = FirebaseFirestore.instance.collection("accessories");
   @override
   Widget build(BuildContext context) {
@@ -33,7 +76,7 @@ class _AccessorState extends State<Accessor> {
 
           ),
           backgroundColor: const Color(0xfff7f9fd),
-          body: StreamBuilder(
+          body:isConnected? StreamBuilder(
               stream: usersref.snapshots(),
               builder: (context, snapshot) {
                 if (snapshot.hasError)
@@ -86,6 +129,44 @@ class _AccessorState extends State<Accessor> {
                 }
                 return const Text('data is ready');
               }
+          ): Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(height: 250),
+                Text(
+                  'لا يوجد اتصال بالإنترنت',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontFamily: 'IBMB',
+                    color: Colors.black,
+                  ),
+                ),
+
+                Column(
+                  children: [
+                    SizedBox(height: 300,),
+                    Text(
+                      'يرجى التأكد من اتصالك بالإنترنت',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontFamily: 'IBMR',
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Text(
+                      'ومن ثم حاول مرة أخرى',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontFamily: 'IBMR',
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
+
+              ],
+            ),
           ),
         ),
       ),

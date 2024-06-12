@@ -12,7 +12,7 @@ class Kia2017 extends StatefulWidget {
 }
 
 class _Kia2017State extends State<Kia2017> {
-  CollectionReference user = FirebaseFirestore.instance.collection("Kia2017");
+  CollectionReference user = FirebaseFirestore.instance.collection("SORENTO");
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -26,7 +26,7 @@ class _Kia2017State extends State<Kia2017> {
             ),
             title: SizedBox(
                 width: 80,
-                child: Text('انواع السيارات',style: TextStyle(fontFamily: 'ibmB',fontSize: 14,color: Colors.white),)),
+                child: Text('كيا سورينتو 2023',style: TextStyle(fontFamily: 'ibmB',fontSize: 14,color: Colors.white),)),
             centerTitle: true,
             shape: RoundedRectangleBorder(borderRadius:
             BorderRadius.only(bottomRight: Radius.circular(15),bottomLeft: Radius.circular(15))),
@@ -166,33 +166,33 @@ class _Kia2017State extends State<Kia2017> {
 
                             ],
                           ),//نبذة
-                          Cars(txt1: 'txt1', txt2: 'txt2',
-                              txt3: 'txt3', txt4: 'txt4',
-                              txt5: 'txt5', txt6:' txt6',
-                              txt7: 'txt7', txt8: 'txt8',
-                              txt9: 'txt9', txt10:' txt10',
-                              txt11: 'txt11',
-                              kind1: 'kind1', kind2: 'kind2',
-                              kind3: 'kind3', kind4: 'kind4',
-                              kind5:' kind5', kind6: 'kind6',
-                              kind7:' kind7', kind8: 'kind8',
-                              kind9: 'kind9', kind10: 'kind10',
-                              kind11:' kind11', kind12: 'kind12',
-                              kind13: 'kind13', kind14: 'kind14',
-                              kind15: 'kind15', kind16: 'kind16',
-                              save1: 'save1', save2: 'save2',
-                              save3: 'save3', save4:' save4',
-                              save5: 'save5', save6: 'save6',
-                              relax1: 'relax1', relax2: 'relax2',
-                              relax3: 'relax3', relax4: 'relax4',
-                              relax5: 'relax5', relax6: 'relax6',
-                              relax7: 'relax7', relax8: 'relax8',
-                              relax9: 'xrela9', relax10: 'relax10',
-                              img1: '${snapshot.data!.docs[index]['img1']}', img2: '${snapshot.data!.docs[index]['img1']}',
-                              img3: '${snapshot.data!.docs[index]['img1']}', img4: '${snapshot.data!.docs[index]['img1']}',
-                              img5: '${snapshot.data!.docs[index]['img1']}', img6: '${snapshot.data!.docs[index]['img1']}',
-                              img7:'${snapshot.data!.docs[index]['img1']}', img8: '${snapshot.data!.docs[index]['img1']}',
-                              img9: '${snapshot.data!.docs[index]['img1']}', color: Colors.red),
+                          Cars(txt1: '${snapshot.data!.docs[index]['txt1']}', txt2: '${snapshot.data!.docs[index]['txt2']}',
+                            txt3: '${snapshot.data!.docs[index]['txt3']}', txt4:'${snapshot.data!.docs[index]['txt4']}',
+                            txt5: '${snapshot.data!.docs[index]['txt5']}', txt6: '${snapshot.data!.docs[index]['txt6']}',
+                            txt7: '${snapshot.data!.docs[index]['txt7']}', txt8: '${snapshot.data!.docs[index]['txt8']}',
+                            txt9:'${snapshot.data!.docs[index]['txt9']}', txt10: '${snapshot.data!.docs[index]['txt10']}',
+                            txt11: '${snapshot.data!.docs[index]['txt11']}', kind1:'${snapshot.data!.docs[index]['kind0']}',
+                            kind2: '${snapshot.data!.docs[index]['kind1']}', kind3: '${snapshot.data!.docs[index]['kind3']}',
+                            kind4: '${snapshot.data!.docs[index]['kind4']}', kind5:'${snapshot.data!.docs[index]['kind5']}',
+                            kind6: '${snapshot.data!.docs[index]['kind6']}', kind7: '${snapshot.data!.docs[index]['kind7']}',
+                            kind8: '${snapshot.data!.docs[index]['kind8']}', kind9:'${snapshot.data!.docs[index]['kind9']}',
+                            kind10: '${snapshot.data!.docs[index]['kind10']}', kind11: '${snapshot.data!.docs[index]['kind11']}',
+                            kind12: '${snapshot.data!.docs[index]['kind12']}', kind13: '${snapshot.data!.docs[index]['kind13']}',
+                            kind14: '${snapshot.data!.docs[index]['kind14']}', kind15: '${snapshot.data!.docs[index]['kind15']}',
+                            kind16: '${snapshot.data!.docs[index]['kind16']}',
+                            save1: '${snapshot.data!.docs[index]['save1']}', save2:'${snapshot.data!.docs[index]['save2']}',
+                            save3: '${snapshot.data!.docs[index]['save3']}', save4: '${snapshot.data!.docs[index]['save4']}',
+                            save5: '${snapshot.data!.docs[index]['save5']}', save6: '${snapshot.data!.docs[index]['save6']}',
+                            relax1: '${snapshot.data!.docs[index]['relax1']}', relax2: '${snapshot.data!.docs[index]['relax2']}',
+                            relax3: '${snapshot.data!.docs[index]['relax3']}', relax4: '${snapshot.data!.docs[index]['relax4']}',
+                            relax5: '${snapshot.data!.docs[index]['relax5']}', relax6: '${snapshot.data!.docs[index]['relax6']}',
+                            relax7: '${snapshot.data!.docs[index]['relax7']}', relax8: '${snapshot.data!.docs[index]['relax8']}',
+                            relax9: '${snapshot.data!.docs[index]['relax9']}', relax10:'${snapshot.data!.docs[index]['relax10']}',
+                            img1: '${snapshot.data!.docs[index]['img9']}', img2: '${snapshot.data!.docs[index]['img10']}',
+                            img3: '${snapshot.data!.docs[index]['img11']}', img4: '${snapshot.data!.docs[index]['img12']}',
+                            img5: '${snapshot.data!.docs[index]['img13']}', img6: '${snapshot.data!.docs[index]['img14']}',
+                            img7:'${snapshot.data!.docs[index]['img15']}', img8: '${snapshot.data!.docs[index]['img16']}',
+                            img9: '${snapshot.data!.docs[index]['img17']}', color: Colors.green,)
                         ],
                       );
                     },

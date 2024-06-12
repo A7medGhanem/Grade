@@ -1,17 +1,62 @@
 import 'package:cars/Models%20of%20mini/MiniClub.dart';
 import 'package:cars/Models%20of%20mini/MiniConutry.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import '../Models Of Hyundai/Hyundai2016.dart';
-import '../Models Of Hyundai/Hyundai2017.dart';
 import '../Models of mini/Beacman.dart';
 import '../Models of mini/Mini Cooper.dart';
 import '../models/GesterModelCar.dart';
 
-class Mini extends StatelessWidget {
+class Mini extends StatefulWidget {
   const Mini({super.key});
 
+  @override
+  State<Mini> createState() => _MiniState();
+}
+
+class _MiniState extends State<Mini> {
+  bool isConnected = false;
+  bool isDelayedActionExecuted = false;
+  @override
+  void initState() {
+
+    // TODO: implement initState
+    super.initState();
+    Connectivity().checkConnectivity().then((result) {
+      setState(() {
+        isConnected = result != ConnectivityResult.none;
+      });
+    });
+
+    // Listen to connectivity changes
+    Connectivity().onConnectivityChanged.listen((ConnectivityResult result) {
+      if (result == ConnectivityResult.none && isConnected) {
+        // Internet was connected and now it's disconnected
+        Future.delayed(Duration(seconds: 10), () {
+          if (mounted && !isDelayedActionExecuted) {
+            setState(() {
+              isConnected = false; // Update UI if needed
+              isDelayedActionExecuted = true; // Prevent repeated execution
+              // Add your code here to execute after 15 seconds of disconnection
+              debugPrint('Delayed action executed after internet disconnection.');
+            });
+          }
+        });
+      } else {
+        // Internet is connected
+        setState(() {
+          isConnected = true; // Update UI if needed
+          isDelayedActionExecuted = false; // Reset delayed action flag
+        });
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    // Dispose the controller when the widget is disposed
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -31,7 +76,7 @@ class Mini extends StatelessWidget {
             BorderRadius.only(bottomRight: Radius.circular(15),bottomLeft: Radius.circular(15))),
 
           ),
-          body: Padding(
+          body:isConnected? Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListView(
               children: [
@@ -113,9 +158,48 @@ class Mini extends StatelessWidget {
                       txt1: 'ميني بيسمان 2023',txt2: 'سيارة ميني كوبر Mini Paceman هي سيارة كروس أوفر كوبيه مدمجة قدمتها شركة ميني بين عامي 2012 و2016. تتميز بتصميم رياضي أنيق ومقصورة داخلية راقية تتسع لأربعة ركاب، بالإضافة إلى أداء ديناميكي ومحرك فعال. توفر السيارة تجربة قيادة ممتعة بفضل نظام الدفع الرباعي وتقنيات القيادة المتطورة.'),
                 ),//2016
 
+              ]
+            ),
+          ):
+          Center(
+        child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(height: 250),
+            Text(
+              'لا يوجد اتصال بالإنترنت',
+              style: TextStyle(
+                fontSize: 16,
+                fontFamily: 'IBMB',
+                color: Colors.black,
+              ),
+            ),
+
+            Column(
+              children: [
+                SizedBox(height: 300,),
+                Text(
+                  'يرجى التأكد من اتصالك بالإنترنت',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontFamily: 'IBMR',
+                    color: Colors.grey,
+                  ),
+                ),
+                Text(
+                  'ومن ثم حاول مرة أخرى',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontFamily: 'IBMR',
+                    color: Colors.grey,
+                  ),
+                ),
               ],
             ),
-          ),
+
+          ],
+        ),
+      ),
         ),
       ),
     );

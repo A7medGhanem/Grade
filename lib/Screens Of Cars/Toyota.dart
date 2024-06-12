@@ -2,14 +2,62 @@ import 'package:cars/Models%20of%20Toyota/Avlon.dart';
 import 'package:cars/Models%20of%20Toyota/Land%20Cruiser.dart';
 import 'package:cars/Models%20of%20Toyota/Toyota%20Corolla.dart';
 import 'package:cars/models/GesterModelCar.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 
 import '../Models of Toyota/Highlander.dart';
 
 
-class Toyota extends StatelessWidget {
+class Toyota extends StatefulWidget {
   const Toyota({super.key});
 
+  @override
+  State<Toyota> createState() => _ToyotaState();
+}
+
+class _ToyotaState extends State<Toyota> {
+  bool isConnected = false;
+  bool isDelayedActionExecuted = false;
+  @override
+  void initState() {
+
+    // TODO: implement initState
+    super.initState();
+    Connectivity().checkConnectivity().then((result) {
+      setState(() {
+        isConnected = result != ConnectivityResult.none;
+      });
+    });
+
+    // Listen to connectivity changes
+    Connectivity().onConnectivityChanged.listen((ConnectivityResult result) {
+      if (result == ConnectivityResult.none && isConnected) {
+        // Internet was connected and now it's disconnected
+        Future.delayed(Duration(seconds: 10), () {
+          if (mounted && !isDelayedActionExecuted) {
+            setState(() {
+              isConnected = false; // Update UI if needed
+              isDelayedActionExecuted = true; // Prevent repeated execution
+              // Add your code here to execute after 15 seconds of disconnection
+              debugPrint('Delayed action executed after internet disconnection.');
+            });
+          }
+        });
+      } else {
+        // Internet is connected
+        setState(() {
+          isConnected = true; // Update UI if needed
+          isDelayedActionExecuted = false; // Reset delayed action flag
+        });
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    // Dispose the controller when the widget is disposed
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -29,7 +77,7 @@ class Toyota extends StatelessWidget {
             BorderRadius.only(bottomRight: Radius.circular(15),bottomLeft: Radius.circular(15))),
 
           ),
-          body: Padding(
+          body:isConnected? Padding(
             padding: const EdgeInsets.all(8.0),
             child: ListView(
               children: [
@@ -113,7 +161,45 @@ class Toyota extends StatelessWidget {
 
               ],
             ),
-          ),
+          ):  Center(
+        child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(height: 250),
+            Text(
+              'لا يوجد اتصال بالإنترنت',
+              style: TextStyle(
+                fontSize: 16,
+                fontFamily: 'IBMB',
+                color: Colors.black,
+              ),
+            ),
+
+            Column(
+              children: [
+                SizedBox(height: 300,),
+                Text(
+                  'يرجى التأكد من اتصالك بالإنترنت',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontFamily: 'IBMR',
+                    color: Colors.grey,
+                  ),
+                ),
+                Text(
+                  'ومن ثم حاول مرة أخرى',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontFamily: 'IBMR',
+                    color: Colors.grey,
+                  ),
+                ),
+              ],
+            ),
+
+          ],
+        ),
+      ),
         ),
       ),
     );

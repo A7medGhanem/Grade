@@ -488,7 +488,7 @@ class _MainScreenState extends State<MainScreen> {
                         },
                         pageBuilder: (context,animation,secondaryAnimation)
                         {
-                          return const PartsOfCars();
+                          return PartsOfCars();
                         }));
                   },
                       height1: 150, height2: 80,ontap2: (){
