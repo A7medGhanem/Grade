@@ -99,7 +99,7 @@ class _LandRoverState extends State<LandRover> {
                           return const Range_Rover();
                         }));
                   },
-                  child: GestCarModel(img1: 'https://media.ed.edmunds-media.com/land-rover/range-rover/2023/izmo/2023_land-rover_range-rover_4dr-suv_p530-autobiography_fs_izmo_1_815x543.jpg',
+                  child: GestCarModel(img1: 'https://images.clickdealer.co.uk/vehicles/5167/5167838/large1/122808691.jpg',
                       txt1: ' رانج روڤر 2023',
                       txt2: 'سيارة Range Rover هي سيارة دفع رباعي فاخرة تنتجها شركة لاند روفر، وهي جزء من مجموعة السيارات الراقية التي تتميز بأدائها القوي وراحة قيادتها الفائقة.'),
                 ),//2017

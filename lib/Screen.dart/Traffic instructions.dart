@@ -66,12 +66,12 @@ class _TrafficState extends State<Traffic> {
         textDirection: TextDirection.rtl,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.orange,
-            leading: IconButton(icon: Icon(Icons.arrow_back_ios_new_rounded), onPressed: () => Navigator.of(context).pop(),
+            backgroundColor: Color(0xff399679),
+            leading: IconButton(icon: Icon(Icons.arrow_back_ios_new_rounded,color: Colors.white,), onPressed: () => Navigator.of(context).pop(),
             ),
             title: SizedBox(
                 width: 80,
-                child: Text('',style: TextStyle(fontFamily: 'ibmB',fontSize: 14,color: Colors.white),)),
+                child: Text('ارشادات المرور',style: TextStyle(fontFamily: 'ibmB',fontSize: 14,color: Colors.white),)),
             centerTitle: true,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomRight: Radius.circular(15),bottomLeft: Radius.circular(15))),
 

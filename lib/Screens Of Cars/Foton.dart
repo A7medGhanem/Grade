@@ -120,7 +120,7 @@ class _FotonState extends State<Foton> {
                           return const  Foton_Sauvana();
                         }));
                   },
-                  child: GestCarModel(img1: 'https://images.autoboom.co.il/9OXilrEfostpTx_dm9iN-TlglE9AkykPCWhmjT5WH8I/fit/1800/1800/sm/0/Z3M6Ly9hdXRvYm9vbS1pbWFnZXMvMDAwLzAwMC8xODQvMTg0MDkzLmpwZw.webp',
+                  child: GestCarModel(img1: 'https://www.chinamobil.ru/photo/FotU201/full/foton-savanna-01.jpg',
                       txt1: 'فوتون ساوفانا2023',txt2: 'فوتون ساوفانا (Foton Sauvana) هي سيارة رياضية متعددة الاستخدامات (SUV) تنتجها شركة فوتون موتور الصينية. تعتبر هذه السيارة جزءًا من مجموعة السيارات الرياضية متعددة الاستخدامات التي تقدمها فوتون، وتتميز بمواصفات تلبي احتياجات العائلات والمغامرين على حد سواء.'),
                 ),//2016
                 GestureDetector(

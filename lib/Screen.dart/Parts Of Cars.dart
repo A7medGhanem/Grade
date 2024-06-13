@@ -73,15 +73,15 @@ class _PartsOfCarsState extends State<PartsOfCars> {
         child: SafeArea(
           child: Scaffold(
             appBar: AppBar(
-              backgroundColor: Colors.white60,
+              backgroundColor:Color(0xff399679),
               leading: IconButton(
-                icon: Icon(Icons.arrow_back_ios_new_rounded),
+                icon: Icon(Icons.arrow_back_ios_new_rounded,color: Colors.white,),
                 onPressed: () => Navigator.of(context).pop(),
               ),
               title: SizedBox(
                 width: 80,
                 child: Text(
-                  ' ',
+                  ' اجزاء السيارة',
                   style: TextStyle(
                     fontFamily: 'ibmB',
                     fontSize: 14,
