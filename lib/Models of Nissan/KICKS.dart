@@ -3,18 +3,14 @@ import 'package:cars/models/Cars.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-class MiniCountry extends StatefulWidget {
-  const MiniCountry({super.key});
+class KICKS extends StatelessWidget {
+  const KICKS({super.key});
 
-  @override
-  State<MiniCountry> createState() => _MiniCountryState();
-}
-
-class _MiniCountryState extends State<MiniCountry> {
-  CollectionReference user = FirebaseFirestore.instance.collection("Mini Countryman");
   @override
   Widget build(BuildContext context) {
-   return Directionality(
+    CollectionReference user = FirebaseFirestore.instance.collection("KICKS");
+
+    return Directionality(
       textDirection: TextDirection.rtl,
       child: SafeArea(
           child:
@@ -25,7 +21,7 @@ class _MiniCountryState extends State<MiniCountry> {
               ),
               title: SizedBox(
                   width:120,
-                  child: Text('ميني كانتري مان 2023',style: TextStyle(fontFamily: 'ibmB',fontSize: 14,color: Colors.white),)),
+                  child: Text('نيسان كيكس 2023',style: TextStyle(fontFamily: 'ibmB',fontSize: 14,color: Colors.white),)),
               centerTitle: true,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomRight: Radius.circular(15),bottomLeft: Radius.circular(15))),
 
@@ -204,6 +200,6 @@ class _MiniCountryState extends State<MiniCountry> {
                   return const Text('data is ready');
                 }),
           )),
-    );
+    );;
   }
 }

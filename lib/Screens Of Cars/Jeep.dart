@@ -164,7 +164,7 @@ class _JeepState extends State<Jeep> {
                   'لا يوجد اتصال بالإنترنت',
                   style: TextStyle(
                     fontSize: 16,
-                    fontFamily: 'IBMB',
+                    fontFamily: 'ibmB',
                     color: Colors.black,
                   ),
                 ),

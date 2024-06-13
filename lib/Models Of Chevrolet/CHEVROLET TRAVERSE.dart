@@ -9,7 +9,7 @@ class CHEVROLET_TRAVERSE extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    CollectionReference user = FirebaseFirestore.instance.collection("Jeep Gladiator");
+    CollectionReference user = FirebaseFirestore.instance.collection("CHEVROLET TRAVERSE");
     return Directionality(
       textDirection: TextDirection.rtl,
       child: SafeArea(

@@ -6,6 +6,7 @@ import 'package:cars/catogerys.dart/About%20Developer.dart';
 import 'package:cars/catogerys.dart/Contact%20us.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:lottie/lottie.dart';
 
 import '../catogerys.dart/option more.dart';
 
@@ -242,6 +243,26 @@ class MoreOption extends StatelessWidget {
                   height: 20,
                 ),
                 const Connect(), //تواصل معنا
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+
+                    Lottie.asset('Assets Josn/Palastine.json',height: 50),
+
+                    Column(
+                      children: [
+                        SizedBox(height: 10,),
+                        Text(' اللهم انصر اخواتنا ',
+                          style: TextStyle(color: Colors.orangeAccent,fontSize:9 ,fontFamily: 'IBMB'),),
+                        Text('لا تنسوهم في دعائكم',
+                          style: TextStyle(color: Colors.black,fontSize: 9,fontFamily: 'IBMB'),),
+                      ],
+                    ),
+                  ],
+                )
               ],
             ),
           ],

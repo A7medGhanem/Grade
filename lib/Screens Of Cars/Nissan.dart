@@ -5,6 +5,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 
 
+import '../Models of Nissan/KICKS.dart';
 import '../Models of Toyota/Toyota Corolla.dart';
 import '../models/GesterModelCar.dart';
 
@@ -152,11 +153,11 @@ class _NissanState extends State<Nissan> {
                         },
                         pageBuilder: (context,animation,secondaryAnimation)
                         {
-                          return const Toyota_Corolla();
+                          return const KICKS();
                         }));
                   },
-                  child: GestCarModel(img1: 'https://ymimg1.b8cdn.com/resized/car_model/8309/pictures/9005607/webp_listing_main_Toyota_Corolla.webp',
-                      txt1: 'تيوتا كرولا 2023',txt2: 'سيارة تويوتا كورولا هي سيارة سيدان مدمجة تُصنع من قبل شركة تويوتا اليابانية. تم إطلاقها لأول مرة في عام 1966 ومنذ ذلك الحين أصبحت واحدة من أكثر السيارات مبيعًا على مستوى العالم. تتميز كورولا بسمعة قوية للموثوقية والاقتصاد في استهلاك الوقود.'),
+                  child: GestCarModel(img1: 'https://salehcars.com/storage/products/out_647cc8579abfd1685899351.JPG',
+                      txt1: 'نيسان كيكس 2023',txt2: 'نيسان كيكس هي سيارة SUV صغيرة مُصممة لتلبية احتياجات الحياة اليومية في المدينة، حيث تجمع بين الأداء الرياضي والمرونة والراحة في القيادة. تم إطلاق نيسان كيكس لأول مرة في عام 2016 ومنذ ذلك الحين حظيت بشعبية متزايدة بين العملاء الذين يبحثون عن سيارة صغيرة الحجم وسهلة القيادة في الحياة الحضرية.'),
                 ),//2016
 
               ],

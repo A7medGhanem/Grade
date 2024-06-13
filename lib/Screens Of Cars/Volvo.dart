@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import '../Models of SSYOUNG/SsangYong Rodius.dart';
 import '../Models of Volvo/Volvo XC70.dart';
+import '../Models of Volvo/Volvo XC90.dart';
 import '../models/GesterModelCar.dart';
 
 class Volvo extends StatefulWidget {
@@ -152,7 +153,7 @@ class _VolvoState extends State<Volvo> {
                         },
                         pageBuilder: (context,animation,secondaryAnimation)
                         {
-                          return const SsangYong_Rodius();
+                          return const Volvo_XC90();
                         }));
                   },
                   child: GestCarModel(img1: 'https://images.prd.kavak.io/eyJidWNrZXQiOiJrYXZhay1pbWFnZXMiLCJrZXkiOiJpbWFnZXMvMzE2OTE5L2Zyb250U2lkZVBpbG90TmVhci1FWFRFUklPUi1hOTJjNTdiOC1lZGRlLTQxNTQtOTQzMy04ZWFlODI4ZGY3MDkuanBlZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODEwLCJoZWlnaHQiOjQ2NX19fQ==',

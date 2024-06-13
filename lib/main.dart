@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
         systemNavigationBarIconBrightness: Brightness.dark));
 
     return MaterialApp(
+
       debugShowCheckedModeBanner: false,
       home: OnBar(),
     );

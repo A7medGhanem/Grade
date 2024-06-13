@@ -65,8 +65,8 @@ class _SignalsState extends State<Signals> {
         textDirection: TextDirection.rtl,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.orange,
-            leading: IconButton(icon: Icon(Icons.arrow_back_ios_new_rounded), onPressed: () => Navigator.of(context).pop(),
+            backgroundColor: Color(0xff399679),
+            leading: IconButton(icon: Icon(Icons.arrow_back_ios_new_rounded,color: Colors.white,), onPressed: () => Navigator.of(context).pop(),
             ),
             title: SizedBox(
                 width: 120,

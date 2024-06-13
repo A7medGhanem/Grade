@@ -1,4 +1,5 @@
 import 'package:cars/Models%20of%20Range%20Rover/Range%20Rover%20Defender%2090.dart';
+import 'package:cars/Models%20of%20Range%20Rover/Range%20Rover%20Discovery.dart';
 import 'package:cars/Models%20of%20Range%20Rover/Range%20Rover%20Sport.dart';
 import 'package:cars/Models%20of%20Range%20Rover/Range%20Rover.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -99,7 +100,7 @@ class _LandRoverState extends State<LandRover> {
                           return const Range_Rover();
                         }));
                   },
-                  child: GestCarModel(img1: 'https://media.ed.edmunds-media.com/land-rover/range-rover/2023/izmo/2023_land-rover_range-rover_4dr-suv_p530-autobiography_fs_izmo_1_815x543.jpg',
+                  child: GestCarModel(img1: 'https://images.clickdealer.co.uk/vehicles/5167/5167838/large1/122808691.jpg',
                       txt1: ' رانج روڤر 2023',
                       txt2: 'سيارة Range Rover هي سيارة دفع رباعي فاخرة تنتجها شركة لاند روفر، وهي جزء من مجموعة السيارات الراقية التي تتميز بأدائها القوي وراحة قيادتها الفائقة.'),
                 ),//2017
@@ -134,7 +135,7 @@ class _LandRoverState extends State<LandRover> {
                         },
                         pageBuilder: (context,animation,secondaryAnimation)
                         {
-                          return const  Range_Rover_Defender();
+                          return const Range_Rover_Discovery();
                         }));
                   },
                   child: GestCarModel(img1: 'https://ymimg1.b8cdn.com/resized/car_model/10063/pictures/11057712/webp_listing_main_15076_st1280_159.webp',
