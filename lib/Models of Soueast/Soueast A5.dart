@@ -1,20 +1,15 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cars/models/Cars.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import '../models/Cars.dart';
+class Soueast_A5 extends StatelessWidget {
+  const Soueast_A5({super.key});
 
-class BMW_X3 extends StatefulWidget {
-  const BMW_X3({super.key});
-
-  @override
-  State<BMW_X3> createState() => _BMW_X3State();
-}
-
-class _BMW_X3State extends State<BMW_X3> {
-  CollectionReference user = FirebaseFirestore.instance.collection("BMW X3");
   @override
   Widget build(BuildContext context) {
+    CollectionReference user = FirebaseFirestore.instance.collection("Soueast A5");
+
     return Directionality(
       textDirection: TextDirection.rtl,
       child: SafeArea(
@@ -26,7 +21,7 @@ class _BMW_X3State extends State<BMW_X3> {
               ),
               title: SizedBox(
                   width:120,
-                  child: Text(' ام دبليو اكس 3 2023',style: TextStyle(fontFamily: 'ibmB',fontSize: 14,color: Colors.white),)),
+                  child: Text('سوايست ايه 5 2023',style: TextStyle(fontFamily: 'ibmB',fontSize: 14,color: Colors.white),)),
               centerTitle: true,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomRight: Radius.circular(15),bottomLeft: Radius.circular(15))),
 

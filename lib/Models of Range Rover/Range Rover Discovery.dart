@@ -4,17 +4,13 @@ import 'package:flutter/material.dart';
 
 import '../models/Cars.dart';
 
-class BMW_X3 extends StatefulWidget {
-  const BMW_X3({super.key});
+class Range_Rover_Discovery extends StatelessWidget {
+  const Range_Rover_Discovery({super.key});
 
-  @override
-  State<BMW_X3> createState() => _BMW_X3State();
-}
-
-class _BMW_X3State extends State<BMW_X3> {
-  CollectionReference user = FirebaseFirestore.instance.collection("BMW X3");
   @override
   Widget build(BuildContext context) {
+    CollectionReference user = FirebaseFirestore.instance.collection("Range Rover Discovery");
+
     return Directionality(
       textDirection: TextDirection.rtl,
       child: SafeArea(
@@ -26,7 +22,7 @@ class _BMW_X3State extends State<BMW_X3> {
               ),
               title: SizedBox(
                   width:120,
-                  child: Text(' ام دبليو اكس 3 2023',style: TextStyle(fontFamily: 'ibmB',fontSize: 14,color: Colors.white),)),
+                  child: Text(' رانج روڤر ديسكاڤري 2023 ',style: TextStyle(fontFamily: 'ibmB',fontSize: 14,color: Colors.white),)),
               centerTitle: true,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomRight: Radius.circular(15),bottomLeft: Radius.circular(15))),
 
