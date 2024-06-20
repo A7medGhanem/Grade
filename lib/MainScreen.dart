@@ -474,7 +474,7 @@ class _MainScreenState extends State<MainScreen> {
                                 return const Directions();
                               }));
                         },
-                        left1: 100, left2:100,
+                        left1: 105, left2:110,
                         txt1: 'اكسسوارات ', txt2: 'الاتجاهات الارشادية',
                         width1: 100, width2:100,
                         color1:const Color (0xffbcf4ff), color2: const Color(0xffdfcef0),
@@ -508,7 +508,7 @@ class _MainScreenState extends State<MainScreen> {
                                 return const Signals();
                               }));
                         },
-                        left1: 120, left2:115,
+                        left1: 125, left2:121,
                         txt1: 'اجزاء السيارة', txt2: 'اشارات تنظيمية',
                         width1: 100, width2:100,
                         color1:const Color (0xffdceadb), color2: const Color(0xffffffff),

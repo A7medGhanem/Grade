@@ -95,7 +95,7 @@ class _KiaState extends State<Kia> {
                 } ,
                 child: GestCarModel(txt2: 'هي سيارة سيدان مدمجة تنتجها شركة كيا موتورز الكورية الجنوبية. تم إطلاق فورتي لأول مرة في عام 2008، ومنذ ذلك الحين حققت شعبية ملحوظة في العديد من الأسواق العالمية.',
                   txt1: 'كيا فورتي 2023',
-                  img1: 'https://read.opensooq.com/wp-content/uploads/2022/07/%D9%85%D9%88%D8%A7%D8%B5%D9%81%D8%A7%D8%AA-%D9%88%D8%B3%D8%B9%D8%B1-%D9%83%D9%8A%D8%A7-%D9%81%D9%88%D8%B1%D8%AA%D9%8A-2023-.webp',),
+                  img1: 'https://ksa.motory.com/tinymce/2023_kia_forte_1_1661851984.jpg',),
               ),
 
 

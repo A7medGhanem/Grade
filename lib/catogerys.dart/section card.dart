@@ -53,7 +53,7 @@ class SectionCard extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.only(left: left1,top:top1),
                       child: Column(children: [
-                        Text(txt1,style: const TextStyle(fontSize: 14,color: Colors.black,fontFamily: 'ibmB'),),
+                        Text(txt1,style: const TextStyle(fontSize: 12.5,color: Colors.black,fontFamily: 'ibmB'),),
                       ],),
                     ),
                   ],
@@ -85,7 +85,7 @@ class SectionCard extends StatelessWidget {
                     Container(
                       margin: EdgeInsets.only(left: left2,top:top2),
                       child: Column(children: [
-                        Text(txt2,style: const TextStyle(fontSize: 14,color: Colors.black,fontFamily: 'ibmB'),),
+                        Text(txt2,style: const TextStyle(fontSize: 12.5,color: Colors.black,fontFamily: 'ibmB'),),
                       ],),
                     ),
                   ],
